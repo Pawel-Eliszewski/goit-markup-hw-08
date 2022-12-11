@@ -1,0 +1,125 @@
+.team {
+    &__section {
+        background-color: var(--background-color2);
+    }
+
+    &__list {
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+
+    &__item {
+        box-shadow: var(--box-shadow);
+        border-radius: 0px 0px 4px 4px;
+        background: var(--text-color2);
+        height: auto;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-svg {
+            fill: var(--svg-color2);
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            gap: 10px;
+        }
+
+        &-item {
+            display: flex;
+            background: var(--text-color2);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+
+            &:hover,
+            &:focus {
+                background: var(--hover-color);
+                fill: var(--text-color2);
+                cursor: pointer;
+                transition-duration: var(--transition-duration-main);
+                transition-timing-function: var(--transition-timing-function-main);
+            }
+
+            &:hover .team__social-svg,
+            &:focus .team__social-svg {
+                fill: var(--text-color2);
+            }
+        }
+
+        &-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__card {
+        line-height: 1.19;
+
+        &-img {
+            width: 270px;
+            height: 100%;
+        }
+
+        &-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 0;
+            margin-top: 30px;
+        }
+
+        &-subtitle {
+            margin-top: 10px;
+            margin-bottom: 16px;
+            font-weight: 400;
+            color: var(--text-color);
+        }
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .team__card {
+        &-img {
+            width: 100%;
+            max-width: 450px;
+            height: 460px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .team__card {
+        &-img {
+            width: 100%;
+            max-width: 354px;
+            max-height: 374px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .team__card {
+        &-img {
+            width: 100%;
+            max-width: 270px;
+            max-height: 260px;
+        }
+    }
+}

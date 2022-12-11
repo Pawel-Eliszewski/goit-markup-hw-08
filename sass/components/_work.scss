@@ -1,0 +1,46 @@
+.work {
+    display: none;
+    visibility: hidden;
+}
+
+@media screen and (min-width:1200px) {
+    .work {
+        display:block;
+        visibility: visible;
+        letter-spacing: 0.03em;
+
+        &__list {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        &__card {
+            position: relative;
+
+            &-name {
+                margin: 0 0;
+                z-index: 2;
+                color: var(--background-color2);
+                line-height: 1.14;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+
+            &-overlay {
+                display: flex;
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                background-image: linear-gradient(var(--gradient-color2),
+                        var(--gradient-color2));
+                z-index: 1;
+                width: 370px;
+                padding-block: 27px;
+                bottom: 0px;
+            }
+        }
+    }
+}

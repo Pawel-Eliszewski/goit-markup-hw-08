@@ -1,0 +1,213 @@
+.portfolio {
+    padding: 0;
+
+    &__filters {
+        &-list {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding-top: 50px;
+        }
+    }
+
+    &__projects {
+        &-list {
+            display: flex;
+            justify-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            font-size: 16px;
+        }
+
+        &-item {
+
+            &:focus,
+            &:hover {
+                box-shadow: var(--box-shadow-hover2);
+                transition-duration: var(--transition-duration-main);
+                transition-timing-function: var(----transition-timing-function-main);
+            }
+
+            &:focus .portfolio__card-overlay,
+            &:hover .portfolio__card-overlay {
+                transform: translate(0, -294px);
+                transition-duration: var(--transition-duration-main);
+                transition-timing-function: var(--transition-timing-function-main);
+            }
+        }
+    }
+
+    &__card {
+        max-width: 100%;
+
+        &-info {
+            border: 1px solid var(--border-bottom-color2);
+            border-top: none;
+        }
+
+        &-thumb {
+            position: relative;
+            overflow: hidden;
+        }
+
+        &-img {
+            max-width: 100%;
+        }
+
+        &-title {
+            font-size: 18px;
+            line-height: 1.4;
+            letter-spacing: 0.06em;
+            padding: 20px 24px 0 24px;
+            margin: 0 auto;
+        }
+
+        &-subtitle {
+            color: var(--text-color);
+            line-height: 1.87;
+            padding: 0 24px 20px 24px;
+            margin: 0 auto;
+        }
+
+        &-overlay {
+            position: absolute;
+            max-width: 100%;
+            height: 294px;
+            background-color: var(--background-color4);
+            transform: translate(0, 0);
+            transition-duration: var(--transition-duration-main);
+            transition-timing-function: var(--transition-timing-function-main);
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            padding: 30px 15px 30px 15px;
+        }
+
+        &-overlay-copy {
+            line-height: 1.40;
+            letter-spacing: 0.02em;
+            color: var(--background-color2);
+            font-size: 18px;
+            margin: 0 auto;
+        }
+
+        &-link {
+            &:hover {
+                color: unset;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:480px) {
+    .portfolio {
+        &__card {
+            &-overlay {
+                padding: 77px 24px 77px 24px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .portfolio {
+        &__filters {
+            &-list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        &__projects {
+            &-list {
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                justify-content: center;
+            }
+        }
+
+        &__card {
+            max-width: 354px;
+
+            &-info {
+                height: 110px;
+            }
+
+            &-thumb {
+                position: relative;
+                overflow: hidden;
+            }
+
+            &-img {
+                max-width: 100%;
+            }
+
+            &-overlay {
+                position: absolute;
+                max-width: 100%;
+                height: 294px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .portfolio {
+        &__filters {
+            &-list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        &__projects {
+            &-list {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-items: center;
+                justify-content: center;
+            }
+        }
+
+        &__card {
+            max-width: 370px;
+
+            &-thumb {
+                position: relative;
+                overflow: hidden;
+            }
+
+            &-img {
+                max-width: 370px;
+            }
+
+            &-overlay {
+                position: absolute;
+                max-width: 354px;
+                max-width: 100%;
+                height: 294px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 49px 45px 49px 24px;
+            }
+
+            &-overlay-copy {
+                padding: 0;
+                font-size: 18px;
+            }
+        }
+    }
+}

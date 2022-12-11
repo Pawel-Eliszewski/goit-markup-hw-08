@@ -1,0 +1,16 @@
+.input {
+    width: 100%;
+    background-color: transparent;
+    margin: 0 auto;
+    padding-left: 42px;
+    border: 1px solid var(--border-color2);
+    border-radius: 4px;
+    height: 40px;
+
+    &:focus {
+        outline: 0;
+        border-color: var(--hover-color);
+        transition-duration: var(--transition-duration-main);
+        transition-timing-function: var(--transition-timing-function-main);
+    }
+}

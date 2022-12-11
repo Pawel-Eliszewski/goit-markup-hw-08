@@ -1,0 +1,61 @@
+body {
+    font-family: "Roboto", "Raleway", sans-serif;
+    color: rgba(33, 33, 33, 1);
+}
+
+.link,
+.link:visited {
+    text-decoration: none;
+    color: unset;
+}
+
+.link--current {
+    color: var(--hover-color);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--hover-color);
+    transition-duration: var(--transition-duration-main);
+    transition-timing-function: var(--transition-timing-function-main);
+}
+
+.img {
+    display: block;
+}
+
+.section {
+    padding-block: 50px;
+}
+
+@media screen and (min-width:768px) {
+    .section {
+        padding-block: 94px;
+    }
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 320px;
+    max-width: 1200px;
+    padding: 0 15px 0 15px;
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    line-height: 1.17;
+}
+
+.btn {
+    cursor: pointer;
+}
