@@ -615,7 +615,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
-  min-height: 581px;
+  /* min-height: 581px; */
   background: var(--text-color2);
   box-shadow: var(--box-shadow);
   border-radius: 4px;
